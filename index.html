@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Raddi - Tradição e Qualidade desde 1985</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .font-serif {
+            font-family: Georgia, serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.1);
+        }
+
+        .transition-transform {
+            transition: transform 0.5s ease;
+        }
+
+        .backdrop-blur-sm {
+            backdrop-filter: blur(4px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- HEADER -->
+    <header class="bg-amber-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                        <path d="M3 6h18"/>
+                        <path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
+                    <div>
+                        <h1 class="text-3xl font-serif">Padaria Raddi</h1>
+                        <p class="text-sm text-amber-200">Tradição e Qualidade desde 1985</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="hover:text-amber-300 transition-colors">Início</a>
+                    <a href="#products" class="hover:text-amber-300 transition-colors">Produtos</a>
+                    <a href="#about" class="hover:text-amber-300 transition-colors">Sobre</a>
+                    <a href="#contact" class="hover:text-amber-300 transition-colors">Contato</a>
+                </nav>
+
+                <div class="hidden lg:flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span class="text-sm">(11) 3456-7890</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative h-[600px] overflow-hidden">
+        <div class="absolute inset-0">
+            <img 
+                src="https://images.unsplash.com/photo-1773077215297-5976142b1d51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWtlcnklMjBzdG9yZWZyb250JTIwZXh0ZXJpb3J8ZW58MXx8fHwxNzc2MzcyMzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                alt="Padaria Raddi"
+                class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+        </div>
+        
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="max-w-2xl text-white">
+                <h2 class="text-5xl md:text-6xl font-serif mb-6">
+                    O Sabor Autêntico de Pães Artesanais
+                </h2>
+                <p class="text-xl mb-8 text-gray-200">
+                    Produzidos diariamente com ingredientes selecionados e muito amor. 
+                    Venha experimentar a tradição que passa de geração em geração.
+                </p>
+                <div class="flex gap-4">
+                    <a 
+                        href="#products" 
+                        class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg transition-colors text-lg inline-block"
+                    >
+                        Ver Produtos
+                    </a>
+                    <a 
+                        href="#contact" 
+                        class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg backdrop-blur-sm transition-colors text-lg border border-white/30 inline-block"
+                    >
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="py-20 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl text-amber-900 mb-4">Nossos Produtos</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Descubra nossa seleção de produtos artesanais, feitos com carinho e dedicação todos os dias
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1767065885755-58ee6202ae74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGJyZWFkJTIwYXJ0aXNhbiUyMGJha2VyeXxlbnwxfHx8fDE3NzY0MjIxMzd8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                            alt="Pães Artesanais"
+                            class="w-full h-full object-cover hover-scale transition-transform"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-amber-900">Pães Artesanais</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Pães frescos assados diariamente, com fermentação natural e ingredientes selecionados. Crocantes por fora, macios por dentro.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1587912001191-0cd4f14fd89e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9pc3NhbnQlMjBwYXN0cmllcyUyMGJha2VyeXxlbnwxfHx8fDE3NzYzODkwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                            alt="Croissants e Folhados"
+                            class="w-full h-full object-cover hover-scale transition-transform"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-amber-900">Croissants e Folhados</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Folhados delicados e croissants amanteigados feitos com técnicas tradicionais francesas. Perfeitos para o café da manhã.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1611871679274-5242ed4c3cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpdGFsaWFuJTIwYnJlYWQlMjBiYWtpbmd8ZW58MXx8fHwxNzc2NDIyMTM4fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                            alt="Pães Especiais"
+                            class="w-full h-full object-cover hover-scale transition-transform"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-amber-900">Pães Especiais</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Linha especial de pães italianos e internacionais. Ciabatta, focaccia, baguette e muito mais.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1775170172323-a0127038e935?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBjYWtlJTIwYmFrZXJ5fGVufDF8fHx8MTc3NjQyMjEzOXww&ixlib=rb-4.1.0&q=80&w=1080" 
+                            alt="Bolos e Doces"
+                            class="w-full h-full object-cover hover-scale transition-transform"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-amber-900">Bolos e Doces</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Bolos caseiros, tortas e doces finos para todas as ocasiões. Feitos com receitas tradicionais de família.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <img 
+                        src="https://images.unsplash.com/photo-1738861666945-281c33ffff87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWtlcnklMjBpbnRlcmlvciUyMGNvdW50ZXJ8ZW58MXx8fHwxNzc2NDIyMTM4fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                        alt="Interior da Padaria Raddi"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+
+                <div>
+                    <h2 class="text-4xl md:text-5xl text-amber-900 mb-6">
+                        Nossa História
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Desde 1985, a Padaria Raddi tem sido referência em qualidade e tradição. 
+                        Fundada pela família Raddi, mantemos o compromisso de oferecer produtos 
+                        artesanais de excelência, preparados com as melhores matérias-primas.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Nossa paixão pela panificação artesanal nos move a cada dia. Cada pão 
+                        é feito com cuidado, seguindo receitas tradicionais que passam de geração 
+                        em geração, garantindo o sabor autêntico que nossos clientes amam.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center p-4">
+                            <div class="flex justify-center mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="8" r="6"/>
+                                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-amber-900 mb-2">Qualidade</h3>
+                            <p class="text-gray-600 text-sm">Ingredientes selecionados</p>
+                        </div>
+
+                        <div class="text-center p-4">
+                            <div class="flex justify-center mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-amber-900 mb-2">Tradição</h3>
+                            <p class="text-gray-600 text-sm">Receitas de família</p>
+                        </div>
+
+                        <div class="text-center p-4">
+                            <div class="flex justify-center mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-amber-900 mb-2">Família</h3>
+                            <p class="text-gray-600 text-sm">Atendimento acolhedor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-amber-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl mb-4">Visite-nos</h2>
+                <p class="text-xl text-amber-200">
+                    Estamos esperando por você com nossos produtos fresquinhos
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-3">Endereço</h3>
+                    <p class="text-amber-100">
+                        Rua das Padarias, 123<br />
+                        Centro - São Paulo/SP<br />
+                        CEP: 01234-567
+                    </p>
+                </div>
+
+                <div class="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-3">Telefone</h3>
+                    <p class="text-amber-100">
+                        (11) 3456-7890<br />
+                        (11) 98765-4321<br />
+                        WhatsApp disponível
+                    </p>
+                </div>
+
+                <div class="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-3">Horário</h3>
+                    <p class="text-amber-100">
+                        Segunda a Sexta: 6h - 20h<br />
+                        Sábado: 6h - 18h<br />
+                        Domingo: 6h - 13h
+                    </p>
+                </div>
+
+                <div class="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-3">E-mail</h3>
+                    <p class="text-amber-100">
+                        contato@padariaraddi.com.br<br />
+                        encomendas@padariaraddi.com.br<br />
+                        Respondemos em 24h
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="inline-block bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                    <h3 class="text-2xl mb-4">Encomendas Especiais</h3>
+                    <p class="text-amber-100 mb-6 max-w-2xl">
+                        Fazemos bolos personalizados, cestas de café da manhã e encomendas para eventos. 
+                        Entre em contato conosco para mais informações!
+                    </p>
+                    <a 
+                        href="tel:1134567890" 
+                        class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg transition-colors"
+                    >
+                        Fazer Encomenda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-amber-950 text-amber-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                            <path d="M3 6h18"/>
+                            <path d="M16 10a4 4 0 0 1-8 0"/>
+                        </svg>
+                        <span class="text-xl font-serif">Padaria Raddi</span>
+                    </div>
+                    <p class="text-amber-200">
+                        Tradição e qualidade em cada produto. 
+                        Servindo a comunidade desde 1985 com amor e dedicação.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#home" class="hover:text-amber-300 transition-colors">
+                                Início
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#products" class="hover:text-amber-300 transition-colors">
+                                Produtos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="hover:text-amber-300 transition-colors">
+                                Sobre Nós
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="hover:text-amber-300 transition-colors">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl mb-4">Redes Sociais</h3>
+                    <p class="text-amber-200 mb-4">
+                        Siga-nos nas redes sociais e fique por dentro das novidades
+                    </p>
+                    <div class="flex gap-4">
+                        <a 
+                            href="#" 
+                            class="w-10 h-10 bg-amber-800 hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors"
+                            aria-label="Facebook"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a 
+                            href="#" 
+                            class="w-10 h-10 bg-amber-800 hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors"
+                            aria-label="Instagram"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-amber-800 pt-8 text-center text-amber-200">
+                <p>&copy; 2026 Padaria Raddi. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
